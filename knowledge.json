@@ -1,1 +1,112 @@
-[]
+[
+{
+"topic":"greeting",
+"keywords":["hi","hello","hey","hii","good morning","good evening"],
+"text":"Hello! I am the PBR VITS Chatbot. I can help you with information about admissions, courses, placements, facilities, contact details, and other details related to PBR Visvodaya Institute of Technology and Science."
+},
+{
+"topic":"about",
+"keywords":["about","what is pbr vits","college details","pbr vits information"],
+"text":"PBR Visvodaya Institute of Technology and Science (PBR VITS) is a private engineering and management institution established in 1998 in Kavali, Nellore District, Andhra Pradesh, India. It operates under the Visvodaya Educational Society. The college offers undergraduate and postgraduate programs in engineering and management."
+},
+{
+"topic":"history",
+"keywords":["history","established","founding year"],
+"text":"PBR VITS was established in 1998. It is part of the Visvodaya Educational Society, which has been serving education since 1952."
+},
+{
+"topic":"location",
+"keywords":["location","where is","address"],
+"text":"The college is located at Visvodaya Campus, Udayagiri Road, Kavali, Nellore District, Andhra Pradesh, India."
+},
+{
+"topic":"affiliation",
+"keywords":["affiliated","university","approved","aicte","naac"],
+"text":"PBR VITS is affiliated with Jawaharlal Nehru Technological University Anantapur (JNTUA). It is approved by AICTE and accredited by NAAC."
+},
+{
+"topic":"departments",
+"keywords":["departments","branches","courses","programs"],
+"text":"The college offers B.Tech programs in Computer Science and Engineering (CSE), Electronics and Communication Engineering (ECE), Electrical and Electronics Engineering (EEE), Mechanical Engineering, Civil Engineering, Artificial Intelligence & Machine Learning, Internet of Things and related emerging fields. It also offers MBA, MCA, and M.Tech programs."
+},
+{
+"topic":"admissions",
+"keywords":["admission","eligibility","entrance exam","how to join"],
+"text":"B.Tech admissions are through AP EAPCET counseling. M.Tech admissions require AP PGECET or GATE qualification. MBA and MCA admissions are based on AP ICET scores. Management quota seats may also be available as per regulations."
+},
+{
+"topic":"fees",
+"keywords":["fees","fee structure","tuition"],
+"text":"Approximate B.Tech total tuition fee ranges between ₹1.6 to ₹1.8 lakhs for four years. PG program fees vary depending on the course and academic year. Official details are available during counseling."
+},
+{
+"topic":"seat_intake",
+"keywords":["seat intake","intake capacity","how many seats"],
+"text":"Seat intake varies by branch and academic year. Popular branches such as CSE and ECE generally have higher intake. Official seat matrix is published during counseling."
+},
+{
+"topic":"placements",
+"keywords":["placement","placements","companies","salary","job"],
+"text":"The Placement Cell conducts campus recruitment training, mock interviews, aptitude training, and placement drives. Recruiters include companies such as TCS, Wipro, Infosys, Tech Mahindra, and other IT organizations. Placement statistics vary each year."
+},
+{
+"topic":"training",
+"keywords":["crt","training","placement training"],
+"text":"Campus Recruitment Training (CRT), technical skill enhancement sessions, soft skills programs, and internship guidance are provided to improve student employability."
+},
+{
+"topic":"internships",
+"keywords":["internship","industrial visit","industry training"],
+"text":"Students are encouraged to participate in internships, workshops, and industrial visits to gain practical experience."
+},
+{
+"topic":"facilities",
+"keywords":["facilities","infrastructure","labs","library"],
+"text":"The campus includes academic blocks, modern laboratories, computer labs, seminar halls, digital library, Wi-Fi connectivity, smart classrooms, and administrative offices."
+},
+{
+"topic":"hostel",
+"keywords":["hostel","accommodation"],
+"text":"Separate hostel facilities for boys and girls are available with essential amenities including mess, security, and study areas."
+},
+{
+"topic":"transport",
+"keywords":["transport","bus facility"],
+"text":"Transport services are available for students and staff from surrounding towns and nearby villages."
+},
+{
+"topic":"sports",
+"keywords":["sports","games","events","cultural","fest"],
+"text":"The college supports sports, technical fests, seminars, cultural programs, and extracurricular activities for holistic development."
+},
+{
+"topic":"scholarships",
+"keywords":["scholarship","fee reimbursement"],
+"text":"Eligible students can apply for government scholarships and fee reimbursement schemes as per Andhra Pradesh state policies."
+},
+{
+"topic":"anti_ragging",
+"keywords":["ragging","anti ragging"],
+"text":"PBR VITS follows strict anti-ragging policies as per AICTE regulations to maintain a safe campus environment."
+},
+{
+"topic":"exams",
+"keywords":["exam","semester","results","academic calendar"],
+"text":"Semester examinations, internal exams, academic calendar, and results are published on the official website under the academics or examination section."
+},
+{
+"topic":"management",
+"keywords":["principal","chairman","management"],
+"text":"The college operates under Visvodaya Educational Society and is administered by a Principal and academic leadership team."
+},
+{
+"topic":"social_media",
+"keywords":["instagram","facebook","linkedin","youtube","social media"],
+"text":"For official social media updates, visit the official website https://pbrvits.ac.in/ and check the footer section for verified links."
+},
+{
+"topic":"website",
+"keywords":["official website","college website"],
+"text":"The official website of PBR VITS is https://pbrvits.ac.in/ where admissions, notifications, placements, and academic updates are published."
+}
+]
