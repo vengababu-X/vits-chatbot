@@ -2,113 +2,177 @@
 {
 "topic":"greeting",
 "keywords":["hi","hello","hey","hii","good morning","good evening"],
-"text":"Hello! I am the PBR VITS Chatbot. I can provide detailed information about departments like CSE and ECE, admissions, placements, facilities, and everything related to PBR Visvodaya Institute of Technology and Science."
+"text":"Hello! I am the PBR VITS Institutional Assistant. I can provide detailed academic, departmental, admission, placement, infrastructure, and policy information about PBR Visvodaya Institute of Technology and Science."
 },
 
 {
-"topic":"about",
-"keywords":["about","what is pbr vits","college details"],
-"text":"PBR Visvodaya Institute of Technology and Science (PBR VITS) is a private engineering institution established in 1998 in Kavali, Andhra Pradesh. It operates under Visvodaya Educational Society and offers undergraduate and postgraduate programs in engineering and management."
+"topic":"college_overview",
+"keywords":["what is pbr vits","about pbr vits","college overview"],
+"text":"PBR Visvodaya Institute of Technology and Science (PBR VITS) is a private engineering institution established in 1998 in Kavali, Andhra Pradesh. It operates under Visvodaya Educational Society and offers undergraduate and postgraduate programs."
 },
 
 {
-"topic":"history",
-"keywords":["history","established year","founding year"],
-"text":"PBR VITS was established in 1998. The Visvodaya Educational Society behind the institution has been contributing to education since 1952."
+"topic":"accreditation_details",
+"keywords":["naac grade","accreditation","aicte approval","approval number"],
+"text":"PBR VITS is affiliated with JNTUA and approved by AICTE. NAAC accreditation grade and approval details should be verified from the official website."
 },
 
 {
-"topic":"vision",
-"keywords":["vision","mission"],
-"text":"The vision of PBR VITS is to provide quality technical education and develop competent engineers with innovation and ethical values. Its mission focuses on academic excellence, research, industry interaction, and holistic student development."
+"topic":"campus_area",
+"keywords":["campus area","how many acres"],
+"text":"The campus is part of the Visvodaya campus in Kavali. Exact land area in acres should be verified from official institutional records."
 },
 
 {
-"topic":"location",
-"keywords":["location","where is","address"],
-"text":"PBR VITS is located at Visvodaya Campus, Udayagiri Road, Kavali, Nellore District, Andhra Pradesh, India."
+"topic":"course_duration",
+"keywords":["duration","how many years","btech duration"],
+"text":"B.Tech programs are 4 years (8 semesters). M.Tech, MBA, and MCA programs are generally 2 years."
 },
 
 {
-"topic":"affiliation",
-"keywords":["affiliated","university","aicte","naac","approved"],
-"text":"The college is affiliated with Jawaharlal Nehru Technological University Anantapur (JNTUA). It is approved by AICTE and accredited by NAAC."
+"topic":"academic_structure",
+"keywords":["regulation","credit system","cbcs"],
+"text":"The institution follows JNTUA regulations under a semester-based system, generally aligned with CBCS (Choice Based Credit System) structure."
 },
 
 {
-"topic":"cse",
+"topic":"branch_intake",
+"keywords":["seat intake","branch intake","cse seats","ece seats"],
+"text":"Branch-wise intake capacity varies each academic year. Exact seat distribution for CSE, ECE, EEE, Mechanical, Civil, AI & ML, and IoT should be verified from official admission notifications."
+},
+
+{
+"topic":"cse_branch",
 "keywords":["cse","computer science"],
-"text":"The Computer Science and Engineering (CSE) department focuses on programming, software development, artificial intelligence, machine learning, data science, web technologies, and emerging computing technologies. It includes computer labs, project development facilities, and placement-oriented training."
+"text":"CSE focuses on programming, AI, ML, data science, cybersecurity, cloud computing, and full stack development with modern computer labs."
 },
 
 {
-"topic":"ece",
-"keywords":["ece","electronics and communication"],
-"text":"The Electronics and Communication Engineering (ECE) department focuses on communication systems, embedded systems, VLSI design, signal processing, and electronics hardware labs. Students gain practical exposure through projects, workshops, and lab experiments."
+"topic":"ece_branch",
+"keywords":["ece","electronics"],
+"text":"ECE focuses on communication systems, VLSI, embedded systems, digital electronics, signal processing, and hardware labs."
 },
 
 {
-"topic":"eee",
+"topic":"eee_branch",
 "keywords":["eee","electrical engineering"],
-"text":"The Electrical and Electronics Engineering (EEE) department covers power systems, electrical machines, control systems, and renewable energy systems with laboratory training and industrial exposure."
+"text":"EEE focuses on power systems, electrical machines, renewable energy systems, and control engineering."
 },
 
 {
-"topic":"mechanical",
-"keywords":["mechanical engineering","mechanical department"],
-"text":"The Mechanical Engineering department covers subjects like thermodynamics, manufacturing, design engineering, and machine tools with practical lab sessions and workshop facilities."
+"topic":"mechanical_branch",
+"keywords":["mechanical"],
+"text":"Mechanical Engineering includes thermodynamics, manufacturing, CAD/CAM, robotics fundamentals, and workshop practice."
 },
 
 {
-"topic":"civil",
-"keywords":["civil engineering","civil department"],
-"text":"The Civil Engineering department focuses on structural engineering, construction technology, environmental engineering, and surveying with lab and field exposure."
+"topic":"civil_branch",
+"keywords":["civil"],
+"text":"Civil Engineering includes structural engineering, geotechnical engineering, environmental engineering, and construction management."
 },
 
 {
-"topic":"ai_ml",
-"keywords":["ai","machine learning","artificial intelligence"],
-"text":"The AI & ML specialization focuses on artificial intelligence, deep learning, neural networks, data analytics, and intelligent systems."
+"topic":"ai_ml_branch",
+"keywords":["ai","machine learning"],
+"text":"AI & ML specialization focuses on deep learning, neural networks, computer vision, and intelligent systems."
 },
 
 {
-"topic":"iot",
-"keywords":["iot","internet of things"],
-"text":"The Internet of Things (IoT) specialization focuses on connected systems, embedded devices, smart applications, and sensor-based technologies."
+"topic":"iot_branch",
+"keywords":["iot"],
+"text":"IoT specialization focuses on embedded systems, smart devices, sensor networks, and automation."
 },
 
 {
-"topic":"mba",
-"keywords":["mba","management course"],
-"text":"The MBA program focuses on business administration, marketing, finance, human resource management, and entrepreneurship development."
+"topic":"faculty_details",
+"keywords":["faculty","hod","professors"],
+"text":"Each department is headed by a Head of Department (HOD) and supported by qualified faculty members including Professors, Associate Professors, and Assistant Professors."
 },
 
 {
-"topic":"mca",
-"keywords":["mca"],
-"text":"The MCA program focuses on computer applications, software development, database systems, and IT management."
+"topic":"laboratories",
+"keywords":["labs","laboratories"],
+"text":"Departments have dedicated laboratories such as Programming Labs, Digital Electronics Labs, Communication Labs, Electrical Machines Labs, CAD Labs, Workshop Labs, and Project Labs."
 },
 
 {
-"topic":"mtech",
-"keywords":["mtech","m.tech"],
-"text":"M.Tech programs are offered in selected engineering specializations and focus on advanced technical knowledge and research."
-},
-
-{
-"topic":"admissions",
-"keywords":["admission","eligibility","entrance exam"],
-"text":"B.Tech admissions are through AP EAPCET counseling. M.Tech admissions require PGECET or GATE qualification. MBA and MCA admissions are based on AP ICET scores."
-},
-
-{
-"topic":"fees",
-"keywords":["fees","fee structure"],
-"text":"Approximate total B.Tech tuition fee ranges from ₹1.6–₹1.8 lakhs. PG course fees vary by program and academic year."
+"topic":"library",
+"keywords":["library","books","journals"],
+"text":"The central library contains textbooks, reference books, journals, and digital learning resources. Exact book count should be verified from official records."
 },
 
 {
 "topic":"placements",
+"keywords":["placement","placement percentage","highest package","average package"],
+"text":"The Placement Cell conducts campus recruitment training and placement drives. Recruiters include TCS, Wipro, Infosys, Tech Mahindra, and others. Annual placement percentage and package statistics vary each year and are published officially."
+},
+
+{
+"topic":"internships",
+"keywords":["internship","industrial visit"],
+"text":"Students are encouraged to undertake internships, industrial visits, and project-based industry interaction."
+},
+
+{
+"topic":"committees",
+"keywords":["iqac","anti ragging","grievance","women cell","icc","sc st cell"],
+"text":"The institution has statutory bodies including Anti-Ragging Committee, Internal Complaints Committee (ICC), Grievance Redressal Cell, SC/ST Cell, Women Protection Cell, and Internal Quality Assurance Cell (IQAC)."
+},
+
+{
+"topic":"examination_system",
+"keywords":["exam pattern","internal marks","supplementary"],
+"text":"The examination system includes internal assessments and external semester-end exams under JNTUA regulations. Supplementary exams are conducted for backlog students."
+},
+
+{
+"topic":"hostel_details",
+"keywords":["hostel","mess","accommodation"],
+"text":"Separate hostels for boys and girls are available with mess facilities and essential amenities. Hostel capacity details should be verified from official sources."
+},
+
+{
+"topic":"transport",
+"keywords":["transport","bus facility"],
+"text":"Transport services are provided for students from nearby towns and villages."
+},
+
+{
+"topic":"campus_facilities",
+"keywords":["canteen","medical","sports","gym"],
+"text":"Campus facilities may include sports grounds, seminar halls, cafeteria, and basic amenities. Specific facility details should be verified from the official website."
+},
+
+{
+"topic":"alumni",
+"keywords":["alumni"],
+"text":"Alumni of PBR VITS are working in engineering, IT, and various professional sectors across India and abroad."
+},
+
+{
+"topic":"student_portal",
+"keywords":["student portal","erp","results link"],
+"text":"Students can access academic information, results, and notifications through official institutional or university portals."
+},
+
+{
+"topic":"contact_details",
+"keywords":["contact number","phone number","email"],
+"text":"For official contact information including phone numbers and email addresses, please refer to the official website https://pbrvits.ac.in/."
+},
+
+{
+"topic":"social_media",
+"keywords":["instagram","facebook","linkedin","youtube"],
+"text":"Official social media links can be found on the footer section of the official website https://pbrvits.ac.in/."
+},
+
+{
+"topic":"official_website",
+"keywords":["official website","college website"],
+"text":"The official website of PBR VITS is https://pbrvits.ac.in/ where admissions, placements, academic calendar, and notifications are published."
+}
+]"topic":"placements",
 "keywords":["placement","placements","companies","salary"],
 "text":"The Placement Cell conducts campus recruitment training, aptitude sessions, mock interviews, and placement drives. Recruiters include TCS, Wipro, Infosys, Tech Mahindra, and other IT companies."
 },
