@@ -1,0 +1,55 @@
+name: Daily Scrape
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Python
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3 python3-pip
+          pip3 install requests beautifulsoup4
+
+      - name: Scrape Website
+        run: |
+          python3 <<EOF
+import requests, json
+from bs4 import BeautifulSoup
+
+urls = [
+    "https://pbrvits.ac.in/",
+    "https://pbrvits.ac.in/Placements",
+    "https://pbrvits.ac.in/Admissions",
+    "https://pbrvits.ac.in/Academics",
+    "https://pbrvits.ac.in/Home/Contact"
+]
+
+data = []
+
+for url in urls:
+    try:
+        r = requests.get(url, timeout=10)
+        soup = BeautifulSoup(r.text, "html.parser")
+        text = soup.get_text(" ", strip=True)
+        data.append({"url": url, "text": text})
+    except:
+        pass
+
+with open("knowledge.json", "w") as f:
+    json.dump(data, f)
+EOF
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add knowledge.json
+          git commit -m "Daily update" || echo "No changes"
+          git push
