@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
 body{
     margin:0;
     font-family:'Segoe UI',sans-serif;
@@ -136,7 +135,6 @@ button:hover{
     from{opacity:0;transform:translateY(5px);}
     to{opacity:1;transform:translateY(0);}
 }
-
 </style>
 </head>
 
@@ -154,11 +152,17 @@ button:hover{
 
 <script>
 
-let knowledge=[];
+let knowledge = [];
 
+// Load knowledge safely
 fetch("knowledge.json")
-.then(res=>res.json())
-.then(data=>knowledge=data);
+.then(res => res.json())
+.then(data => {
+    knowledge = data;
+})
+.catch(err => {
+    console.error("Knowledge file not loaded:", err);
+});
 
 function addMessage(text,type){
     const div=document.createElement("div");
@@ -187,6 +191,7 @@ function removeTyping(){
 }
 
 function send(){
+
     const input=document.getElementById("input");
     const originalText=input.value.trim();
     const userText=originalText.toLowerCase();
@@ -202,6 +207,13 @@ function send(){
 
         removeTyping();
 
+        // HARD GREETING FIX
+        const greetings=["hi","hello","hey","hii","good morning","good evening"];
+        if(greetings.includes(userText)){
+            addMessage("Hello! I am the PBR VITS Assistant. How can I help you today?","bot");
+            return;
+        }
+
         let bestMatch=null;
         let highestScore=0;
         const words=userText.split(/\s+/);
@@ -215,15 +227,15 @@ function send(){
                 const keyLower=key.toLowerCase();
 
                 if(userText===keyLower){
-                    score+=10;
+                    score+=100;
                 }
 
                 if(userText.includes(keyLower)){
-                    score+=5;
+                    score+=10;
                 }
 
                 for(let word of words){
-                    if(word.length>2 && keyLower.includes(word)){
+                    if(word.length>1 && keyLower.includes(word)){
                         score+=2;
                     }
                 }
@@ -235,16 +247,16 @@ function send(){
             }
         }
 
-        if(!bestMatch){
+        if(!bestMatch || highestScore<5){
             bestMatch="Sorry, I could not find specific information. Please visit https://pbrvits.ac.in/ for complete details.";
         }
 
         addMessage(bestMatch,"bot");
 
-    },900+Math.random()*500);
+    },800+Math.random()*400);
 }
 
-addMessage("Hello! I am the PBR VITS Chatbot. How can I help you today?","bot");
+addMessage("Hello! I am the PBR VITS Assistant. How can I help you today?","bot");
 
 </script>
 
