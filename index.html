@@ -6,135 +6,145 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
 body {
     margin:0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #003366, #0055aa);
+    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    background: linear-gradient(-45deg, #003366, #004c99, #0066cc, #002244);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
 #chat {
     width:400px;
-    height:600px;
-    background:white;
-    border-radius:20px;
-    box-shadow:0 20px 50px rgba(0,0,0,0.3);
+    height:620px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    border-radius:25px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.3);
     display:flex;
     flex-direction:column;
     overflow:hidden;
 }
 
 #header {
-    background: linear-gradient(135deg, #003366, #004c99);
-    color:white;
     padding:20px;
     text-align:center;
-}
-
-#header h2 {
-    margin:0;
+    color:white;
+    font-weight:600;
     font-size:18px;
-}
-
-#header p {
-    margin:5px 0 0;
-    font-size:12px;
-    opacity:0.8;
+    letter-spacing:1px;
 }
 
 #messages {
     flex:1;
     padding:15px;
     overflow-y:auto;
-    background:#f7f9fc;
     display:flex;
     flex-direction:column;
     gap:10px;
 }
 
 .msg {
-    padding:10px 14px;
-    border-radius:15px;
+    padding:10px 15px;
+    border-radius:18px;
     max-width:75%;
     font-size:14px;
     line-height:1.4;
-    animation:fadeIn 0.3s ease;
+    animation: fadeIn 0.3s ease;
 }
 
 .user {
     background:#003366;
     color:white;
     align-self:flex-end;
-    border-bottom-right-radius:4px;
+    border-bottom-right-radius:5px;
 }
 
 .bot {
-    background:#e9ecef;
+    background:white;
     color:#333;
     align-self:flex-start;
-    border-bottom-left-radius:4px;
+    border-bottom-left-radius:5px;
 }
 
 #inputArea {
     display:flex;
     padding:15px;
-    border-top:1px solid #ddd;
-    background:white;
 }
 
 #input {
     flex:1;
-    padding:10px 15px;
-    border-radius:25px;
-    border:1px solid #ccc;
+    padding:12px 15px;
+    border-radius:30px;
+    border:none;
     outline:none;
     font-size:14px;
 }
 
-#input:focus {
-    border-color:#003366;
-}
-
 button {
     margin-left:10px;
-    background:#003366;
-    color:white;
-    border:none;
     width:45px;
     height:45px;
     border-radius:50%;
-    cursor:pointer;
+    border:none;
+    background:#003366;
+    color:white;
     font-size:16px;
-    transition:0.2s;
+    cursor:pointer;
+    transition:0.3s;
 }
 
 button:hover {
-    background:#0055aa;
     transform:scale(1.1);
+    background:#0055aa;
 }
 
 .typing {
-    font-style:italic;
-    opacity:0.6;
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.dot {
+    width:6px;
+    height:6px;
+    background:#999;
+    border-radius:50%;
+    animation: blink 1.4s infinite both;
+}
+
+.dot:nth-child(2) { animation-delay: .2s; }
+.dot:nth-child(3) { animation-delay: .4s; }
+
+@keyframes blink {
+    0% { opacity:.2; }
+    20% { opacity:1; }
+    100% { opacity:.2; }
 }
 
 @keyframes fadeIn {
     from { opacity:0; transform:translateY(5px); }
     to { opacity:1; transform:translateY(0); }
 }
+
 </style>
 </head>
 
 <body>
 
 <div id="chat">
-<div id="header">
-<h2>PBR VITS Assistant</h2>
-<p>Kavali Campus Information Bot</p>
-</div>
+<div id="header">PBR VITS Assistant</div>
 
 <div id="messages"></div>
 
@@ -153,64 +163,77 @@ fetch("knowledge.json")
 .then(data => knowledge = data);
 
 function addMessage(text, type){
-    const div = document.createElement("div");
-    div.className = "msg " + type;
-    div.textContent = text;
+    const div=document.createElement("div");
+    div.className="msg "+type;
+    div.textContent=text;
     document.getElementById("messages").appendChild(div);
-    document.getElementById("messages").scrollTop = 9999;
+    document.getElementById("messages").scrollTop=9999;
 }
 
 function showTyping(){
-    const div = document.createElement("div");
-    div.className = "msg bot typing";
-    div.id = "typing";
-    div.textContent = "Typing...";
+    const div=document.createElement("div");
+    div.className="msg bot typing";
+    div.id="typing";
+
+    div.innerHTML = `
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    `;
+
     document.getElementById("messages").appendChild(div);
-    document.getElementById("messages").scrollTop = 9999;
+    document.getElementById("messages").scrollTop=9999;
 }
 
 function removeTyping(){
-    const typing = document.getElementById("typing");
-    if(typing) typing.remove();
+    const t=document.getElementById("typing");
+    if(t) t.remove();
 }
 
 function send(){
-    const input = document.getElementById("input");
-    const userText = input.value.trim().toLowerCase();
+    const input=document.getElementById("input");
+    const originalText=input.value.trim();
+    const userText=originalText.toLowerCase();
     if(!userText) return;
 
-    addMessage(input.value,"user");
+    addMessage(originalText,"user");
     input.value="";
 
     showTyping();
 
-    setTimeout(() => {
+    setTimeout(()=>{
 
         removeTyping();
 
-        let bestMatch = null;
-        let highestScore = 0;
+        let bestMatch=null;
+        let highestScore=0;
+        const words=userText.split(/\s+/);
 
         for(let item of knowledge){
-            let score = 0;
+            let score=0;
             for(let key of item.keywords){
-                if(userText.includes(key)){
-                    score++;
+                if(userText.includes(key.toLowerCase())) score+=3;
+
+                for(let word of words){
+                    if(key.includes(word) || word.includes(key)){
+                        score+=1;
+                    }
                 }
             }
-            if(score > highestScore){
-                highestScore = score;
-                bestMatch = item.text;
+            if(score>highestScore){
+                highestScore=score;
+                bestMatch=item.text;
             }
         }
 
         if(!bestMatch){
-            bestMatch = "Sorry, I could not find specific information. Please visit https://pbrvits.ac.in/ for complete details.";
+            bestMatch="Sorry, I could not find specific information. Please visit https://pbrvits.ac.in/ for complete details.";
         }
 
         addMessage(bestMatch,"bot");
 
-    }, 600);
+    }, 900 + Math.random()*600); // natural delay
+
 }
 
 addMessage("Hello! I am the PBR VITS Chatbot. How can I help you today?","bot");
